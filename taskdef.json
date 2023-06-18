@@ -1,0 +1,25 @@
+{
+    "family": "new_definiton",
+    "executionRoleArn": "arn:aws:iam::971467359615:role/ecsTaskExecutionRole",
+    "networkMode": "awsvpc",
+    "containerDefinitions": [
+        {
+            "name": "HTTPContainer",
+            "image": "971467359615.dkr.ecr.ap-south-1.amazonaws.com/newtestrepo:latest",
+            "portMappings": [
+                {
+                    "containerPort": 80,
+                    "hostPort": 80,
+                    "protocol": "tcp"
+                }
+            ],
+            "essential": true,
+            "entryPoint": [],
+            "command": []
+        }
+    ],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "1024",
+    "memory": "3072"
