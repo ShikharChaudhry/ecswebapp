@@ -17,7 +17,7 @@ pipeline {
         stage('Build the image'){
             steps{
                 script{
-                sh '''docker build -t newtestrepo /var/lib/jenkins/workspace/ecsproject/'''
+                sh '''docker build -t newtestrepo .'''
                 }
             }
         }
