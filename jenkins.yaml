@@ -3,7 +3,7 @@ pipeline {
     stages{
         stage('Clone the code'){
             steps{
-                git branch: 'main', url: 'https://github.com/bawlacoder/ecswebapp'
+                git branch: 'main', url: 'https://github.com/ShikharChaudhry/ecswebapp.git'
             }
         }
         stage('Login to ECR'){
@@ -39,7 +39,7 @@ pipeline {
         stage('update the service'){
             steps{
                 script{
-                sh '''aws ecs update-service --cluster democluster --service updated_service --force-new-deployment --region ap-south-1 --task-definition new_definiton'''
+                sh '''aws ecs update-service --cluster ECS-demo-Cluster --service ECS_service --force-new-deployment --region ap-south-1 --task-definition ECS-taskdefinition'''
                 }
             }
         }

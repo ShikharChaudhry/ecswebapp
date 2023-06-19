@@ -1,10 +1,10 @@
 {
-    "family": "new_definiton",
+    "family": "ECS-taskdefinition",
     "executionRoleArn": "arn:aws:iam::971467359615:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
     "containerDefinitions": [
         {
-            "name": "HTTPContainer",
+            "name": "HTTPDContainer",
             "image": "971467359615.dkr.ecr.ap-south-1.amazonaws.com/newtestrepo:latest",
             "portMappings": [
                 {
